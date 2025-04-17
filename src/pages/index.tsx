@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-//import BookCard from '../components/BookCard';
-//import FeaturedBook from '../components/FeaturedBook';
+import BookCard from '../components/BookCard';
+import FeaturedBook from '../components/FeaturedBook';
 import { useLanguage } from '../context/LanguageContext';
 import { getFilteredBooks, getCategories, getCategoriesAr } from '../data/books';
 import { ArrowRight } from 'lucide-react';
@@ -112,7 +112,7 @@ const Index = () => {
             <div className="w-16 h-1 bg-accent mx-auto"></div>
           </div>
           
-          {/*  featuredBooks.length > 0 && <FeaturedBook book={featuredBooks[0]} /> */}
+          {  featuredBooks.length > 0 && <FeaturedBook book={featuredBooks[0]} /> }
 
           <div className="mt-16 text-right">
             <Link 
@@ -135,9 +135,9 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/*  newArrivals.slice(0, 4).map((book) => (
+            {  newArrivals.slice(0, 4).map((book) => (
               <BookCard key={book.id} book={book} />
-            ))  */}
+            ))  }
           </div>
 
           <div className="mt-10 text-center">

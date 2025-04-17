@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../components/ui/dropdown-menu";
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const { t, language, setLanguage } = useLanguage();
@@ -34,17 +35,17 @@ const Navbar: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 px-16 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'glass-morphism shadow-sm py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="page-container flex items-center justify-between">
+      <div className="page-container  flex items-center justify-between">
         {/* Logo */}
-        <h2>LOGO</h2>
+        <Logo size="md" />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className={`nav-link ${isActive('/') ? 'active-nav-link' : ''}`}>
+          <Link to="/" className={`nav-link ${isActive('/') ? 'text-green-400' : ''}`}>
             {t('home')}
           </Link>
           <Link to="/catalog" className={`nav-link ${isActive('/catalog') ? 'active-nav-link' : ''}`}>
